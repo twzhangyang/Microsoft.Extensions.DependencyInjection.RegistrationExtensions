@@ -75,9 +75,14 @@ Try to inject through the constructor below:
 
 ```
 public AlipayPayment(IAlipayOptions alipayOptions) { //... }
+```
+
 Work very well, no problem. But when we try to get all the IOptions types from the container:
 
+```
 container.ResolveAll<IOptions>();
+```
+
 You don't get any instances of the IOptions type, because the process of registering the relationship with the container is one-to-one. Our previous extension: WithDefaultInterface() only registered the relationship between `AlipayOptions` and `IAlipayOptions`, if you want to get All instances that inherit IOptions you need to use another extension:
 
 ```
