@@ -1,7 +1,8 @@
 # Microsoft.Extensions.DependencyInjection.RegistrationExtensions
 A registration extension enable you register components in ASP.NET Core like you are using Windsor Castle
+
 As a fun of windsor castle, I would like registering components to Container in ASP.NET Core by Castle's way, But 
-ASP.NET Core's DI is enough for us, A few line of code were created enable you using API like Castle.
+ASP.NET Core's DI is enough for us, A few lines of code were created enable you using API like Castle.
 
 ```
 container.Register(Classes.FromAssembly().BaseOn<IOptions>().WithDefaultInterface());
@@ -10,7 +11,7 @@ container.Register(Classes.FromAssembly().BaseOn<IOptions>().WithSelf());
 container.Register(Classes.FromAssembly().BaseOn<IOptions>().WithDefaultInterfaceAndSelf());
 container.Register(Classes.FromAssembly().BaseOn<IOptions>().WithBaseClassAndSelf());
 ```
-All the extension support open Generic type:
+All the extensions support open generic type:
 ```
 container.Register(Classes.FromAssembly().BaseOn<List<>>().WithDefaultInterface());
 ```
