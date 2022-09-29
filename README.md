@@ -1,7 +1,7 @@
 # Microsoft.Extensions.DependencyInjection.RegistrationExtensions
 A registration extension enable you register components in ASP.NET Core like you are using Windsor Castle
 
-As a fun of windsor castle, I would like registering components to Container in ASP.NET Core by Castle's way, But 
+As a fan of windsor castle, I would like registering components to Container in ASP.NET Core by Castle's way, But 
 ASP.NET Core's DI is enough for us, A few lines of code were created enable you using API like Castle.
 
 ```
